@@ -65,9 +65,9 @@ def run(configfile: Sequence[str], service: str | None, set_: list[str]) -> None
     config: dict[str, Any] = {}
     for path in configfile:
         config_data = yaml.load(path, AsphaltLoader)
-        assert isinstance(
-            config_data, dict
-        ), "the document root element must be a dictionary"
+        assert isinstance(config_data, dict), (
+            "the document root element must be a dictionary"
+        )
         config = merge_config(config, config_data)
 
     # Override config options
