@@ -65,8 +65,7 @@ class Event:
 
     def __repr__(self) -> str:
         return (
-            f"{self.__class__.__name__}(source={self.source!r}, "
-            f"topic={self.topic!r})"
+            f"{self.__class__.__name__}(source={self.source!r}, topic={self.topic!r})"
         )
 
 
